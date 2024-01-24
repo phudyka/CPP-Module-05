@@ -6,7 +6,7 @@
 /*   By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 13:51:50 by phudyka           #+#    #+#             */
-/*   Updated: 2024/01/23 09:59:08 by phudyka          ###   ########.fr       */
+/*   Updated: 2024/01/23 10:12:16 by phudyka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,10 @@
 
 #include <iostream>
 #include <stdexcept>
-#include "Form.hpp"
+#include "AForm.hpp"
 
-class Form;
+class AForm;
+
 class Bureaucrat
 {
 	private:
@@ -36,7 +37,8 @@ class Bureaucrat
 	void	setGrade(const int _new);
 	int	getGrade(void) const;
 	const std::string	getName(void) const;
-	void	signForm(Form &ref);
+	void	signForm(AForm &ref);
+	void	executeForm(AForm const &ref);
 
 	class Exception : public std::exception
 	{

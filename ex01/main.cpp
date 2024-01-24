@@ -6,30 +6,66 @@
 /*   By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 13:51:56 by phudyka           #+#    #+#             */
-/*   Updated: 2024/01/19 11:58:34 by phudyka          ###   ########.fr       */
+/*   Updated: 2024/01/22 15:46:47 by phudyka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
 #include "Form.hpp"
+#include <iostream>
 
 int main()
 {
-    try
-	{
-        Bureaucrat johnDoe("John Doe", 10);
-        Form taxForm("Taxes", 5, 8);
-        std::cout << "Initial state of the form:\n" << taxForm << std::endl;
-        taxForm.signing(johnDoe);
-        std::cout << "\nState of the form after signing attempt:\n" << taxForm << std::endl;
-        Bureaucrat janeDoe("Jane Doe", 3);
-        taxForm.signing(janeDoe);
-        std::cout << "\nState of the form after Jane Doe's signing attempt:\n" << taxForm << std::endl;
-        Form invalidForm("Invalid Form", 0, 160);
-	}
-	catch (std::exception &e)
-	{
-		std::cerr << "Exception: " << e.what() << std::endl;
-	}   
-	return 0;
+    std::cout << std::endl;
+    std::cout << "CONSTRUCTING:" << std::endl;
+    std::cout << "----------------------------" << std::endl;
+    Bureaucrat bob("Bob", 1);
+    Bureaucrat bill("Bill", 132);
+
+    Form a("A13", 4, 6);
+    Form b("B97", 146, 135);
+
+    try {
+        Form c("C46", 489, 1435);
+    } catch (Form::Exception &e) {
+        std::cout << "Constructor failure: " << e.what() << std::endl; 
+    }
+
+    try {
+        Form c("D143", -583, -800);
+    } catch (Form::Exception &e) {
+        std::cout << "Constructor failure: " << e.what() << std::endl; 
+    }
+    std::cout << std::endl << std::endl;
+    std::cout << std::endl;
+    std::cout << "SIGN FORMS:" << std::endl;
+    std::cout << "----------------------------" << std::endl;
+
+    std::cout << "SIGN OK:" << std::endl;
+    bob.signForm(a);
+    std::cout << a << " just showed its current status" << std::endl;
+    a.setSignature(false);
+    std::cout << std::endl << std::endl;
+
+    std::cout << "SIGN KO:" << std::endl;
+    bill.signForm(a);
+    std::cout << a << " just showed its current status" << std::endl;
+    std::cout << std::endl << std::endl;
+
+    std::cout << "SIGN OK:" << std::endl;
+    bob.signForm(b);
+    std::cout << b << " just showed its current status" << std::endl;
+    b.setSignature(false);
+    std::cout << std::endl << std::endl;
+
+    std::cout << "SIGN OK:" << std::endl;
+    bill.signForm(b);
+    std::cout << b << " just showed its current status" << std::endl;
+    std::cout << std::endl << std::endl;
+
+    std::cout << std::endl;
+    std::cout << "DESTRUCTORS:" << std::endl;
+    std::cout << "----------------------------" << std::endl;
+
+    return 0;
 }
+

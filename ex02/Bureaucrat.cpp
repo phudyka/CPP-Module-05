@@ -6,7 +6,7 @@
 /*   By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 13:51:48 by phudyka           #+#    #+#             */
-/*   Updated: 2024/01/22 16:40:17 by phudyka          ###   ########.fr       */
+/*   Updated: 2024/01/24 09:45:28 by phudyka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,15 +102,28 @@ const char	*Bureaucrat::GradeTooHighException::what() const throw()
 	return ("Grade cannot go above 150");
 }
 
-void	Bureaucrat::signForm(Form &ref)
+void	Bureaucrat::signForm(AForm &ref)
 {
 	try
 	{
 		ref.signing(*this);
 		std::cout << this->_name << " graded " << this->_grade << " has signed " << ref << std::endl;
 	}
-	catch (Form::Exception &except)
+	catch (AForm::Exception &except)
 	{
 		std::cout << this->_name << " graded " << this->_grade << " could not signed " << ref << " because of " << except.what() << std::endl;
+	}
+}
+
+void	Bureaucrat::executeForm(AForm const &ref)
+{
+	try
+	{
+		ref.execute(*this);
+		std::cout << this->_grade << " has been executed " << ref << std::endl;
+	}
+	catch(AForm::Exception &e)
+	{
+		std::cout << e.what() << std::endl;
 	}
 }
