@@ -6,7 +6,7 @@
 /*   By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 13:51:48 by phudyka           #+#    #+#             */
-/*   Updated: 2024/01/22 16:40:17 by phudyka          ###   ########.fr       */
+/*   Updated: 2024/01/24 16:18:03 by phudyka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,7 +106,7 @@ void	Bureaucrat::signForm(Form &ref)
 {
 	try
 	{
-		ref.signing(*this);
+		ref.beSigned(*this);
 		std::cout << this->_name << " graded " << this->_grade << " has signed " << ref << std::endl;
 	}
 	catch (Form::Exception &except)

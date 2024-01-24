@@ -6,7 +6,7 @@
 /*   By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 11:37:00 by phudyka           #+#    #+#             */
-/*   Updated: 2024/01/23 10:08:18 by phudyka          ###   ########.fr       */
+/*   Updated: 2024/01/24 16:05:05 by phudyka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,7 +96,7 @@ const char	*AForm::UnsignedFormException::what() const throw()
 	return ("Cannot execute when unsigned");
 }
 
-void	AForm::signing(Bureaucrat &ref)
+void	AForm::beSigned(Bureaucrat &ref)
 {
 	int	grade;
 

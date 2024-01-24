@@ -6,19 +6,19 @@
 /*   By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 10:13:48 by phudyka           #+#    #+#             */
-/*   Updated: 2024/01/24 09:47:14 by phudyka          ###   ########.fr       */
+/*   Updated: 2024/01/24 16:19:29 by phudyka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ShrubberyCreationForm.hpp"
 
-ShrubberyCreationForm::ShrubberyCreationForm() : AForm("Default Shrub Parent", 25, 5)
+ShrubberyCreationForm::ShrubberyCreationForm() : AForm("Default Shrub Parent", 145, 137)
 {
 	this->_target = "Default";
 	std::cout << "Shrubbery Creation" << *this << "has been constructed as default" << std::endl;
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm(std::string target) : AForm("Shrub Parent", 25, 137)
+ShrubberyCreationForm::ShrubberyCreationForm(std::string target) : AForm("Shrub Parent", 145, 137)
 {
 	this->_target = target;
 	std::cout << "Shrubbery Creation" << *this << "has been constructed" << std::endl;

@@ -6,7 +6,7 @@
 /*   By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 15:00:03 by phudyka           #+#    #+#             */
-/*   Updated: 2024/01/19 11:55:19 by phudyka          ###   ########.fr       */
+/*   Updated: 2024/01/24 16:18:41 by phudyka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ const char	*Form::GradeTooHighException::what() const throw()
 	return ("Grade too high");
 }
 
-void	Form::signing(Bureaucrat &ref)
+void	Form::beSigned(Bureaucrat &ref)
 {
 	int	grade;
 

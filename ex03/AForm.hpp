@@ -6,7 +6,7 @@
 /*   By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 11:38:00 by phudyka           #+#    #+#             */
-/*   Updated: 2024/01/24 14:42:57 by phudyka          ###   ########.fr       */
+/*   Updated: 2024/01/24 16:19:38 by phudyka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ class AForm
 		bool	getSignature(void) const;
 		void	setSignature(const bool _new);
 		const std::string	getName(void) const;
-		void	signing(Bureaucrat &ref);
+		void	beSigned(Bureaucrat &ref);
 		virtual void	execute(Bureaucrat const &exec) const = 0;
 
 		class Exception : public std::exception

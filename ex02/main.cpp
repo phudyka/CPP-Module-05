@@ -6,7 +6,7 @@
 /*   By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 13:51:56 by phudyka           #+#    #+#             */
-/*   Updated: 2024/01/24 10:02:15 by phudyka          ###   ########.fr       */
+/*   Updated: 2024/01/24 16:07:19 by phudyka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	main(void)
 
 	std::cout << std::endl << "[UNSIGNED]" << std::endl;
 	bob.executeForm(shrub);
-	shrub.signing(bob);
+	shrub.beSigned(bob);
 
 	std::cout << std::endl << "[SIGNED]" << std::endl;
 	bob.executeForm(shrub);
@@ -46,7 +46,7 @@ int	main(void)
 	std::cout << "----------------------------" << std::endl;
 	std::cout << std::endl << "[UNSIGNED]" << std::endl;
 	bob.executeForm(robo);
-	robo.signing(bob);
+	robo.beSigned(bob);
 
 	std::cout << std::endl << "[SIGNED (50% failure chance)]" << std::endl;
 	bob.executeForm(robo);
@@ -65,7 +65,7 @@ int	main(void)
 
 	std::cout << std::endl << "[UNSIGNED]" << std::endl;
 	bob.executeForm(president);
-	president.signing(bob);
+	president.beSigned(bob);
 
 	std::cout << std::endl << "[SIGNED]" << std::endl;
 	bob.executeForm(president);

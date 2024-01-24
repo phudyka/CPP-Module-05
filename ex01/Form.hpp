@@ -6,7 +6,7 @@
 /*   By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 15:00:00 by phudyka           #+#    #+#             */
-/*   Updated: 2024/01/22 16:35:26 by phudyka          ###   ########.fr       */
+/*   Updated: 2024/01/24 16:17:43 by phudyka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ class	Form
 		int		getGradeToExec(void) const;
 		bool	getSignature(void) const;
 		void	setSignature(const bool _new);
-		void	signing(Bureaucrat &ref);
+		void	beSigned(Bureaucrat &ref);
 		const std::string	getName(void) const;
 
 		class Exception : public std::exception

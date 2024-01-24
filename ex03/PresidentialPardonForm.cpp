@@ -6,7 +6,7 @@
 /*   By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 10:13:43 by phudyka           #+#    #+#             */
-/*   Updated: 2024/01/22 15:13:27 by phudyka          ###   ########.fr       */
+/*   Updated: 2024/01/24 16:19:07 by phudyka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ PresidentialPardonForm::PresidentialPardonForm() : AForm("Default Presidential P
 	std::cout << "Presidential Pardon" << *this << "has been constructed as default" << std::endl;
 }
 
-PresidentialPardonForm::PresidentialPardonForm(std::string target) : AForm("Presidential Parent", 25, 137)
+PresidentialPardonForm::PresidentialPardonForm(std::string target) : AForm("Presidential Parent", 25, 5)
 {
 	this->_target = target;
 	std::cout << "Presidential Pardon" << *this << "has been constructed" << std::endl;
